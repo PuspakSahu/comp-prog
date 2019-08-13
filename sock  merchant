@@ -1,0 +1,26 @@
+int sockMerchant(int n, int ar_count, int* ar) {
+    int carr[100];
+    int flag[100];
+    int sum;
+    for(int i=0;i<n;++i)
+    {
+        carr[i]=0;
+        flag[i]=0;
+        for(int j=0;j<n;++j)
+        {
+            if(ar[i]==ar[j] && flag[i]!=1)
+            {
+                carr[j]++;
+                flag[i]=1;
+            }
+        }
+    }
+    for(int i=0;i<n;++i)
+    {
+        carr[i]=carr[i]/2;
+        sum+=carr[i];
+
+    }
+    return(sum);
+
+}
